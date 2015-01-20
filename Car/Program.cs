@@ -12,14 +12,14 @@ namespace Car
 
         static void Main(string[] args)
         {
-            int disDriven;
-
             Car car;
-            Console.Write("Enter ditance driven: ");
-            disDriven = Convert.ToInt16(Console.ReadLine());
-            car = new Car("bob", "bob", 5, disDriven);
-            Console.WriteLine(car.ToString());
-            Console.WriteLine("Fuel left: " + car.Fuel + "%");
+            car = new Car("Ford Fiesta", "Silver", 3);
+            
+            Console.WriteLine(car.Fuel); // 100% by default
+            car.DistanceDrive(100); // 100 miles is 10% of the total fuel
+            Console.WriteLine(car.Fuel) // We can see the fuel has decresed by 10%
+            car.DistanceDrive(9999999) // We have insufficient fuel for this trip
+            
             Console.ReadLine();
         }
       
