@@ -31,8 +31,13 @@ namespace Car
 
            public override string ToString()
         {
-            return "model: " + model + "\n" + "colour: " + colour + "\n" + "Number of doors: " + noOfDoors; 
+            return "Model: " + model + "\n" + "Colour: " + colour + "\n" + "Number of doors: " + noOfDoors; 
         }
+
+           public void DistanceDrive()
+           {
+               milesDriven = Convert.ToInt32(Console.ReadLine());
+           }
 
         
         
